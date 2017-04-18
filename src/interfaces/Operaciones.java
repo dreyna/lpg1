@@ -5,10 +5,17 @@
  */
 package interfaces;
 
+import java.util.List;
+
 /**
  *
  * @author UPEU
+ * @param <Pojo>
  */
-public interface Operaciones {
-    
+public interface Operaciones<Pojo> {
+    public int create(Pojo p);
+    public int edit(Pojo p);
+    public int delete(int key);
+    public List<Pojo> readAll();
+    public Pojo read(int key);
 }
